@@ -1,0 +1,34 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding: 8px;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top right, #b31e1e,#ffcccc);
+  animation-name: rotate-hue-animation;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.game {
+  flex: auto;
+}
+
+@keyframes rotate-hue-animation {
+  0% { filter: hue-rotate(0deg); }
+  17% { filter: hue-rotate(60deg); }
+  34% { filter: hue-rotate(120deg); }
+  51% { filter: hue-rotate(180deg); }
+  67% { filter: hue-rotate(240deg); }
+  83% { filter: hue-rotate(300deg); }
+  100% { filter: hue-rotate(360deg); }
+}

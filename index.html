@@ -7,13 +7,19 @@
     <title>Hangman Game</title>
 </head>
 <body>
-    <h1 id="word"></h1>
-    <form id="form">
-      <label for="letter">Enter a letter:</label>
-      <input type="text" id="letter" name="letter">
-      <input type="submit" value="Guess">
-    </form>
-
+  <div class="background">
+    <div class="game">
+      <h1 id="word"></h1>
+      <h1 id="lives"></h1>
+      <h1 id="msg"></h1>
+      
+      <form id="form">
+        <label for="letter">Enter a letter:</label>
+        <input type="text" id="letter" name="letter">
+        <input type="submit" value="Guess">
+      </form>
+    </div>
     <script src="scripts/index.js"></script>
+  </div>
 </body>
 </html>

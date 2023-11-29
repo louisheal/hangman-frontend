@@ -3,18 +3,19 @@ function postGuess(event) {
   const formData = new FormData();
   formData.append('letter', letterValue);
 
-  fetch("https://hangman-backend-3j7x.onrender.com/guess", {
+  fetch("http://localhost:5000/guess", {
     method: "POST",
     body: formData
   })
 }
 
-async function getStatus() {
-  const response = await fetch("https://hangman-backend-3j7x.onrender.com/status");
+async function setStatus() {
+  const response = await fetch("http://localhost:5000/status");
   const status = await response.json();
   document.getElementById("word").innerHTML = status['word'];
+  document.getElementById("lives").innerHTML = status['lives'];
+  document.getElementById("msg").innerHTML = status['msg'];
 }
 
-getStatus();
-
+setStatus();
 document.getElementById("form").addEventListener("submit", postGuess);
